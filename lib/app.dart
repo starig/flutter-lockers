@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         initialRoute: '/',
         routes: routes,
         theme: ThemeData(
-          fontFamily: "Manrope",
+            fontFamily: "Manrope",
             scaffoldBackgroundColor: bgHeader,
             appBarTheme: AppBarTheme(
               backgroundColor: bgHeader,

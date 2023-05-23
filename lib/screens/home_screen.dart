@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -17,8 +15,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  ScrollController _controller = new ScrollController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,11 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
               vertical: scale(22),
             ),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(scale(22)),
-                  topRight: Radius.circular(scale(22)),
-                ),
-                color: white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(scale(22)),
+                topRight: Radius.circular(scale(22)),
+              ),
+              color: white,
             ),
             child: SingleChildScrollView(
               child: Column(

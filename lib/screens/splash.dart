@@ -11,22 +11,24 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/bg.jpg"),
-            fit: BoxFit.cover
-          )
-        ),
+            image: DecorationImage(
+                image: AssetImage("assets/images/bg.jpg"), fit: BoxFit.cover)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset("assets/icons/logo.svg"),
-              SizedBox(height: scale(24),),
-              Text('ALILOCK', style: TextStyle(
-                color: white,
-                fontSize: scale(28),
-                fontWeight: FontWeight.w700,
-              ),)
+              SizedBox(
+                height: scale(24),
+              ),
+              Text(
+                'ALILOCK',
+                style: TextStyle(
+                  color: white,
+                  fontSize: scale(28),
+                  fontWeight: FontWeight.w700,
+                ),
+              )
             ],
           ),
         ),
