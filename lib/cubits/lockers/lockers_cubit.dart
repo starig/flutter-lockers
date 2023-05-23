@@ -14,9 +14,9 @@ class LockersCubit extends Cubit<LockersState> {
   final dio = Dio();
 
   getLockers() async {
+    List<Locker> lockers = [];
     try {
-      Response response = await dio.get(apiUrl);
-      List<Locker> lockers = [];
+      Response response = await dio.get("$apiUrl''");
       response.data['lockers'].forEach((locker) {
         Locker item = Locker.fromJson(locker);
         lockers.add(item);
@@ -26,6 +26,8 @@ class LockersCubit extends Cubit<LockersState> {
       emit(state.copyWith(lockers: state.lockers, isLoaded: state.isLoaded));
       return response;
     } catch (e) {
+      state.isLoaded = true;
+      emit(state.copyWith(lockers: state.lockers, isLoaded: state.isLoaded));
       throw Exception(e);
     }
   }
